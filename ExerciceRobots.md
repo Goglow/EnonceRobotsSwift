@@ -41,4 +41,22 @@ Créez 4 robots dans un Array et faites les se présenter à tour de rôle grâc
 
 Nos  Robots veulent maintenant se déplacer pour conquérir le monde. Créer une fonction move() qui permet de se déplacer vers le haut, le bas, la gauche, ou la droite sur la carte. En plus de la direction, on doit pouvoir choisir de se déplacer de 1 au nombre maximum de cases correspondant à la vitesse maximale de déplacement du robot (3 par défaut)
 
-Retourner dans le mail et faire déplacer les robots tans toutes les directions au choix. Après les avoir fait déplacer, les faire parler à nouveau pour vérifier qu'ils sont bien dans des cases aux coordonnées différentes.
+Retourner dans le main et faire déplacer les robots dans toutes les directions au choix. Après les avoir fait déplacer, les faire parler à nouveau pour vérifier qu'ils sont bien dans des cases aux coordonnées différentes.
+
+## 6 - En mouvement brownien
+
+Nous voulons permettre à nos robots d’effectuer plusieurs tours de déplacement d’affilée.
+
+Créer une fonction *seDeplacerAleatoirement()* qui prend en paramètre un nombre de coups de déplacement. Elle choisira aléatoirement de se déplacer de 1 ou plusieurs cases dans des directions différentes.
+**Exemple**: si on appelle : *robot.seDeplacerAleatoirement(4)* …le robot se déplacera aléatoirement 4 fois. Par exemple : une fois vers le haut de 1 case, une fois vers la gauche de 3 cases, une autre fois vers la gauche de 2 cases et une fois vers le bas de 2 cases.
+
+Faire parler à nouveau nos robots pour vérifier qu’ils ont bien bougé.
+
+## 7 - Des robots uniques Leur nom ne leur suffit pas.
+Nos robots aimeraient bien avoir un peu plus de personnalité.
+
+Ajouter un second constructeur qui permet de définir, en plus du nom, les points de vie, la vitesse et la position initiale du robot.
+
+Faire en sorte ensuite que, lors de la création des objets dans le main, ceux‐ci aient des caractéristiques  différentes de votre choix.
+
+Observer le comportement du main maintenant. Les robots se disent-­ils bien placés à des cases différentes de (0 ; 0) audépart ? Vont‐ils bien se déplacer à la nouvelle vitesse maximale qu’on leur a définie?

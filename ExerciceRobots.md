@@ -52,8 +52,8 @@ Créer une fonction *seDeplacerAleatoirement()* qui prend en paramètre un nombr
 
 Faire parler à nouveau nos robots pour vérifier qu’ils ont bien bougé.
 
-## 7 - Des robots uniques Leur nom ne leur suffit pas.
-Nos robots aimeraient bien avoir un peu plus de personnalité.
+## 7 - Des robots uniques
+Leur nom ne leur suffit pas. Nos robots aimeraient bien avoir un peu plus de personnalité.
 
 Ajouter un second constructeur qui permet de définir, en plus du nom, les points de vie, la vitesse et la position initiale du robot.
 

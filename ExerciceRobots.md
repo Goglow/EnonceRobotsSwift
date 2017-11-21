@@ -60,3 +60,15 @@ Ajouter un second constructeur qui permet de définir, en plus du nom, les point
 Faire en sorte ensuite que, lors de la création des objets dans le main, ceux‐ci aient des caractéristiques  différentes de votre choix.
 
 Observer le comportement du main maintenant. Les robots se disent-­ils bien placés à des cases différentes de (0 ; 0) audépart ? Vont‐ils bien se déplacer à la nouvelle vitesse maximale qu’on leur a définie?
+
+## 8 - Des Robots Méchants
+Maintenant afin de donner un peu de piment dans la vie de nos Robots, nous allons donc créer des Robots pouvant infliger des dégats soit à distance soit en "corp à corp". Pour cela nous allons donc réaliser une classe "Méchant" qui a les caractéristiques suivantes :
+
+    * Les mêmes caractéristique que la classe Robot
+    * Des points de dommages infligés
+    * Une options dégats à distance ( vrai ou faux)
+    
+Ces méchants pourront égamelement effectuer une action attaquer une cible qui aura des conséquences différentes en fonction de la possibilité d'attaque à distance ou non. Par exemple si un robot ne peut pas faire d'attaque à distance et qu'il essaie d'attaquer un Robot qui n'est pas à côté de lui on affiche un message du type *"La cible est trop loin pour être attaquée"* Pour cette méthode je laisse libre court à votre imagination pour la répartition des dégâts. 
+
+Nous pourrons donc ensuite générer des Robots méchants
+    

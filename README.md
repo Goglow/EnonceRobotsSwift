@@ -2,6 +2,8 @@
 
 Nous allons construire un robot virtuel qui pourra se déplacer sur une carte et effectuer diverses actions. Pour faciliter le travail nous allons utiliser les concepts de la programmation orientée objet dans un nouveau projet **XCode**.
 
+N'hésitez pas à forker ce projet et créer l'exercice dans le repo forké
+
 ## 1 - Créer une Classe Robot
 
 La première étape de cette exercice sera de créer une classe Robot avec les caractéristiques suivantes :

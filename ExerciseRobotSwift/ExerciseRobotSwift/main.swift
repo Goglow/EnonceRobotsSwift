@@ -31,3 +31,6 @@ var badRobot = Bad(damageMelee: 20, damageRemote: true)
 badRobot.introdiuce()
 badRobot.attack(robots: twoRobot)
 twoRobot.introdiuce()
+twoRobot.seDeplacerAleatoirement(coups: 5)
+
+

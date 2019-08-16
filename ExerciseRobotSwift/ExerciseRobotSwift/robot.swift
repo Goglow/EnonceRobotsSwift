@@ -32,25 +32,33 @@ public class Robot {
         print("Bonjour je m'appelle \(robotName). J'ai \(pointsOfLife) points de vie et je me déplace à \(maximumSpeedOfMovement) cases par seconde. Je suis à la case de coordonnées \(position).")
     }
     
+    
     func move(direction: Direction, choiceSpeed: Int) {
+        var speed = 0
         if choiceSpeed <= 3 {
-            maximumSpeedOfMovement = choiceSpeed
+           speed =  choiceSpeed
         } else {
-            maximumSpeedOfMovement = 3
+           speed =  maximumSpeedOfMovement
         }
         switch direction {
         case .up :
-            self.position.Y += choiceSpeed
+            self.position.Y += speed
         case .down :
-            self.position.Y -= choiceSpeed
+            self.position.Y -= speed
         case .left :
-            self.position.X -= choiceSpeed
+            self.position.X -= speed
         case .right :
-            self.position.X += choiceSpeed
+            self.position.X += speed
         }
+        print("\(self.robotName) est maintenant a la position x: \(self.position.X), y: \(self.position.Y)")
     }
     
-    func seDeplacerAleatoirement(coups: Int) -> Int {
-        return Int(arc4random_uniform(UInt32(coups)))
+    func seDeplacerAleatoirement(coups: Int) {
+        for _ in 1...coups{
+            let speed = Int.random(in: 0...maximumSpeedOfMovement)
+            let direction = Direction.allCases.randomElement()!
+            move(direction: direction, choiceSpeed: speed)
+        }
+        
     }
 }

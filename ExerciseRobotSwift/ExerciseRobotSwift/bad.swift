@@ -18,7 +18,13 @@ public class Bad: Robot {
         super.init(robotName: "BadRobot", pointsOfLife: 100, maximumSpeedOfMovement: 3, position: (0, 0))
     }
     
-    func attack(robots: Robot) {
+    init(name: String, damageMelee: Int, damageRemote: Bool) {
+        self.damageMelee = damageMelee
+        self.damageRemote = damageRemote
+        super.init(robotName: name, pointsOfLife: 100, maximumSpeedOfMovement: 3, position: (0, 0))
+    }
+    
+    /*func attack(robots: Robot) {
         if position == (0,0) {
             robots.pointsOfLife -= damageMelee
         } else if damageRemote == true {
@@ -26,5 +32,26 @@ public class Bad: Robot {
         } else {
             print("La cible est trop loin pour être attaquée")
         }
+    }*/
+    
+    func attack(target: Robot){
+        // verifier si le mechant peut attaquer a distance ou non
+        
+        // sinon regarder si target se trouve dans une position adjascente a la position de mon attaquant
+        // exemple
+        //
+        // -|-|-
+        // o|x|-  => target.position.X - self.position.x == -1
+        // -|-|-
+        //
+        // -|-|-
+        // -|x|o  => target.position.X - self.position.x == 1
+        // -|-|-
+        //
+        // -|o|-
+        // -|x|-  => target.position.Y - self.position.Y == 1
+        // -|-|-
+        //
+        //si pas distance et pas en adjascent : message d'erreur ne peut pas attaquer la cible
     }
 }

@@ -8,7 +8,8 @@
 
 import Foundation
 
-public class Bad: Robot {
+// 8 - Bad robots
+class Bad: Robot {
     var damageMelee: Int
     var damageRemote: Bool
     
@@ -18,13 +19,19 @@ public class Bad: Robot {
         super.init(robotName: "BadRobot", pointsOfLife: 100, maximumSpeedOfMovement: 3, position: (0, 0))
     }
     
-    func attack(robots: Robot) {
-        if position == (0,0) {
-            robots.pointsOfLife -= damageMelee
-        } else if damageRemote == true {
-            robots.pointsOfLife -= damageMelee
+    init(name: String, damageMelee: Int, damageRemote: Bool) {
+        self.damageMelee = damageMelee
+        self.damageRemote = damageRemote
+        super.init(robotName: name, pointsOfLife: 100, maximumSpeedOfMovement: 3, position: (0, 0))
+    }
+    
+    func attack(target: Robot) {
+        if damageRemote == true {
+            target.pointsOfLife -= damageMelee
+        } else if target.position.X - self.position.X == -1 || target.position.X - self.position.X == 1 || target.position.Y - self.position.Y == -1 || target.position.Y - self.position.Y == 1 {
+            target.pointsOfLife -= damageMelee
         } else {
-            print("La cible est trop loin pour être attaquée")
+            print("La cible est trop loin pour être attaquée !")
         }
     }
 }

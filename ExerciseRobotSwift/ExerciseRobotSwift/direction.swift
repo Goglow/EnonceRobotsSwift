@@ -8,6 +8,10 @@
 
 import Foundation
 
-enum Direction {
-    case up, down, left, right
+// 5 - Robots conquer the world
+enum Direction : CaseIterable {
+    case up
+    case down
+    case left
+    case right
 }
